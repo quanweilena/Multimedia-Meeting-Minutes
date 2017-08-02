@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/lindas/Desktop/graduate/ELG5121/M3/M3/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">m3</string>
+    <string name="hello">Hello World, M3Activity!</string>
+</resources>

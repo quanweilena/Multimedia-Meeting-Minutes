@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phonegap>
+    <access origin="http://127.0.0.1*"/>
+    <log level="DEBUG"/>
+</phonegap>
+<!-- From: file:/C:/Users/lindas/Desktop/graduate/ELG5121/M3/M3/app/src/main/res/xml/phonegap.xml -->

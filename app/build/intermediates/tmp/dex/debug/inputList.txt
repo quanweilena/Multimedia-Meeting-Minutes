@@ -1,0 +1,2 @@
+C:\Users\lindas\Desktop\graduate\ELG5121\M3\M3\app\build\intermediates\classes\debug
+C:\Users\lindas\Desktop\graduate\ELG5121\M3\M3\app\build\intermediates\pre-dexed\debug\phonegap-c0ba2614154cf505bab67c27a2545aa779928e3c.jar

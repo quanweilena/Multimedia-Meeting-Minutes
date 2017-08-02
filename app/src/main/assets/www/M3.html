@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <link rel="stylesheet" media="screen" href="css/proui.css" />
+    <link rel="stylesheet" media="screen" href="css/pn_main.css" />
+    <script type="text/javascript" charset="utf-8" src="3rd_js/phonegap-1.4.1.js"></script>
+    <script type="text/javascript" src="3rd_js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="3rd_js/jquery.validate.js"></script>
+    <script type="text/javascript" src="3rd_js/prowebapps.js"></script>
+	<script type="text/javascript" src="app_js/pn_main.js"></script>
+	<script type="text/javascript" src="app_js/todolist.js"></script>
+	<script type="text/javascript" src="app_js/form.js"></script>
+	<script type="text/javascript" src="api_js/camera.js"></script>
+	<script type="text/javascript" src="api_js/media.js"></script>
+	<script type="text/javascript" src="api_js/file.js"></script>
+	<script type="text/javascript" src="api_js/capture.js"></script>
+      <style type="text/css">
+          body { background-image: url(./img/bg1.jpg);
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover; }
+      </style>
+  </head>
+  <body>
+  	<ul id="menu">
+	</ul>
+	<div id="main" class="view">
+        <h3>Multimedia Meeting Minutes</h3>
+		<ul class="buttons">
+			<a class="changeview button1" style="background: url(./img/notes_list.png)" href="#allnotes"></a>
+			<a class="changeview button1" style="background: url(./img/new_note.png)" href="#addNote"></a>
+		</ul>
+        <hr />
+        <h3>Meeting Reminders</h3>
+		<ul class="buttons">
+			<a class="changeview button1" style="background: url(./img/reminder_list.png)" href="#alltasks"></a>
+			<a class="changeview button1" style="background: url(./img/new_reminder.png)" href="#addTask"></a>
+		</ul>
+		<hr />
+
+   		<div class="result-block">
+   		</div>				
+    </div>
+    
+	<div id="allnotes" class="view">
+		<h1 class="fancy">All Meeting Minutes</h1>
+		<ul id="notelist">
+		</ul>
+
+		<div class="result-block">
+		</div>
+	</div>
+
+	<div id="alltasks" class="view">
+		<h1 class="fancy">All Reminders</h1>
+		<ul id="tasklist">
+		</ul>
+		<div class="result-block">
+		</div>
+	</div>
+
+    <div id="addNote" class="view">
+	    <h1 class="fancy">Create Meeting Minutes</h1>
+		<div id="errors"></div>
+	    <form id="noteentry">
+	    <ul>
+	        <li><input type="text" class="required" name="note[name]" id="notename" placeholder="Meeting Name" value=""/></li>
+	        <li>
+	            <textarea name="note[description]" id="notedesc" placeholder="Details" rows="5"></textarea>
+	        </li>
+	        <li><input type="text" class="required date" name="note[due]" id="notedue" placeholder="Time in form 'yyyy-mm-dd'" value="" /></li>
+	        <li class="naked"><input type="submit" name="Save" /></li>
+	    </ul>
+	    </form>   
+	    <a class="button" style="background: url(./img/camera.png)" onclick="take_pic2();"></a>
+		<a class="button" style="background: url(./img/album.png)" onclick="album_pic();"></a>
+        <a class="button" style="background: url(./img/record.png)" onclick="captureAudio();"></a>
+
+
+        <div class="result-block1">
+   		     <span id="capture-result"></span>
+   		     <span id="format-data"></span><br/>
+   		</div>		
+   		<div class="result-block">
+   		</div>	
+	</div>
+	
+	<div id="addTask" class="view">
+		<h1 class="fancy">Create Reminder</h1>
+	    <form id="taskentry">
+        <ul>
+	        <li><input type="text" class="required" name="task[name]" id="taskname" placeholder="Meeting Name" value=""/></li>
+	        <li>
+	            <textarea name="task[description]" id="taskdesc" placeholder="Details" rows="5"></textarea>
+	        </li>
+	        <li><input type="text" class="required date" name="task[due]" id="taskdue" placeholder="Time in form 'yyyy-mm-dd'" value="" /></li>
+	        <li class="naked"><input type="submit" name="Save" /></li>
+	    </ul>
+	    </form>
+	</div>
+
+	<div id="audiolist" class="view">
+	    <h1 class="fancy">Audio List</h1>
+	    <span id="sp"></span>
+	    <div style="width:100%;background:#A4C6C2;height:20px;">
+        <div id="mp" style="width:0px;height:20px;background:#FFD047"></div>
+   </div>
+   <br/>
+   <button id='playBtn' onclick='playAudio();' style="display:none;">play</button>
+   <button id='pauseBtn' onclick='pauseAudio();' style="display:none;">pause</button>
+   <button id='stopBtn' onclick='stopAudio();' style="display:none;">stop</button>
+	<div class="result-block">
+	</div>
+   </div>
+  </body>
+</html>

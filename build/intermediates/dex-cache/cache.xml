@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\lindas\Desktop\graduate\ELG5121\M3\M3\app\libs\phonegap.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ae619d749d3f7da8fd020c91394f0f9f399af8bd">
+        <dex dex="C:\Users\lindas\Desktop\graduate\ELG5121\M3\M3\app\build\intermediates\pre-dexed\debug\phonegap-c0ba2614154cf505bab67c27a2545aa779928e3c.jar" />
+    </item>
+
+</items>
